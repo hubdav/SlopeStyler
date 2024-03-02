@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+    <title>Slope Styler</title>
+</head>
+<body>
+    <div class="container">
+        <h1 class="h1">Slope Styler</h1>
+        <h2 class="h2">Linear function formula:</h2>
+        <h2 class="h2">f(x) = ax + b</h2>
+        <div class="coord-system">
+            <div class="origin"></div>
+            <div class="x-line"></div>
+            <div class="y-line"></div>
+            <div class="incline"></div>
+        </div>
+        <h2 class="h2 formula">f(x) = <span class="formula-a">a</span>x <span class="function-op">+</span> <span class="formula-b">b</span></h2>
+        <h2 class="h2 formula">&alpha;: <span class="alpha"></span>°</h2>
+        <div class="slidecontainer">
+            <div class="slider">            
+                <input type="range" min="-10" max="10" value="0" class="input-range" step="0.25" id="incline-slider" />
+                <label for="incline-slider">Incline (a): <span id="incline-value"></span></label>
+            </div>
+            <div class="slider">
+                <input type="range" min="-15" max="15" value="0" class="input-range" step="0.5" id="y-slider" />
+                <label for="y-slider">Y-Intercept (b): <span id="y-axis-value"></span></label>
+            </div>
+        </div>
+        <hr class="hr"/>
+        <div class="stylecontainer"> 
+            <div class="line-thickness-container slider">
+                <input type="range" min="1" max="9" value="1" class="input-range" step="2" id="line-thickness" />
+                <label for="line-thickness">Line thickness: <span id="line-thickness-value"></span></label>
+            </div>
+            <div class="color-picker-container">
+                <input type="color" class="color-picker" id="color-picker">
+                <label for="color-picker">Change line color</label>
+            </div>
+
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
